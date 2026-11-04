@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e16">
+  <meta name="description" content="Explore ALTAIR Aerospace Group's proposed and exploratory projects in aeronautics, astronautics, software and aerospace systems.">
+  <title>Projects | ALTAIR Aerospace Group</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script src="projects-data.js" defer></script>
+  <script src="projects.js" defer></script>
+</head>
+<body>
+  <div class="topline"><span class="signal"></span> INDEPENDENT AEROSPACE VENTURE <span class="topline-separator">/</span> EARLY-STAGE R&amp;D</div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="ALTAIR Aerospace Group home"><img class="brand-emblem" src="assets/altair-emblem.png" data-light-src="assets/altair-emblem.png" data-dark-src="assets/altair-emblem-transparent.png" alt=""><span class="brand-wording"><img src="assets/altair-wordmark.png" data-light-src="assets/altair-wordmark.png" data-dark-src="assets/altair-wordmark-transparent.png" alt=""><img src="assets/aerospace-group-wordmark.png" data-light-src="assets/aerospace-group-wordmark.png" data-dark-src="assets/aerospace-group-wordmark-transparent.png" alt=""></span></a>
+    <div class="header-controls"><button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode"><span aria-hidden="true">◐</span></button><button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button></div>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a href="index.html">Overview</a><a href="aeronautics.html">Aeronautics</a><a href="astronautics.html">Astronautics</a><a class="current" aria-current="page" href="projects.html">Projects</a><a href="research.html">Research</a><a class="nav-contact" href="contact.html">Contact <span>↗</span></a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-hero project-hero">
+      <div class="page-hero-copy"><p class="eyebrow"><span class="eyebrow-line"></span> PROGRAMME REGISTER / 01</p><h1>Concepts into<br><em>engineering evidence.</em></h1><p>Project directions across flight, space and engineering software. Each entry shows its current stage and a practical next step—so an idea is never mistaken for a finished product.</p></div>
+      <figure class="projects-hero-photo"><img src="assets/nasa-earth-limb.jpg" alt="The sunrise line on Earth's horizon photographed from Gemini 7"><figcaption>NASA / GEMINI 7 — REFERENCE IMAGE</figcaption></figure>
+      <div class="page-hero-index"><span>PORTFOLIO STATUS</span><b>LIVE REGISTER / EARLY STAGE</b></div>
+    </section>
+    <section class="section-pad portfolio-section">
+      <div class="section-heading">
+        <div><p class="section-kicker">01 / PROJECT REGISTER</p><h2>Work in <em>progression.</em></h2></div>
+        <p>These are initial areas of exploration, not claims of completed products. Update the status as work progresses and publish results with their assumptions and limitations.</p>
+      </div>
+      <div class="division-switcher">
+        <a href="aeronautics-projects.html"><span>DIVISION 01 / AIR</span><h3>Altair Aeronautics</h3><b>Aircraft, aerodynamics &amp; flight sciences ↗</b></a>
+        <a href="astronautics-projects.html"><span>DIVISION 02 / SPACE</span><h3>Altair Astronautics</h3><b>Orbital mechanics &amp; mission systems ↗</b></a>
+      </div>
+      <div class="portfolio-controls">
+        <label class="search-control"><span>SEARCH PROJECTS</span><input id="project-search" type="search" placeholder="Search title, area, or stage…" autocomplete="off"></label>
+        <label class="select-control"><span>DISCIPLINE</span><select id="project-category"><option value="all">All disciplines</option><option value="Aeronautics">Aeronautics</option><option value="Astronautics">Astronautics</option><option value="Software">Software</option><option value="Unmanned systems">Unmanned systems</option></select></label>
+        <label class="select-control"><span>STAGE</span><select id="project-status"><option value="all">All stages</option><option value="Proposed">Proposed</option><option value="Concept">Concept</option><option value="In progress">In progress</option><option value="Testing">Testing</option><option value="Complete">Complete</option></select></label>
+      </div>
+      <p class="result-count" id="project-count" aria-live="polite"></p>
+      <div class="portfolio-grid" id="portfolio-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden><span>NO MATCHING PROJECTS</span><p>Try a different search or discipline.</p></div>
+      <div class="portfolio-admin">
+        <div class="admin-icon" aria-hidden="true">+</div>
+        <div><p class="section-kicker">OWNER'S NOTE / ADDING YOUR WORK</p><h3>Add projects, reports, CAD &amp; models</h3><p>Draft an entry with the project builder, place files in the right division folder and commit both to GitHub. The website links to published files; it cannot upload them itself.</p></div>
+        <a class="button button-outline" href="project-builder.html">Open project builder <span>↗</span></a>
+      </div>
+    </section>
+    <section class="cta-band"><div><p class="section-kicker">HAVE A RELATED CHALLENGE?</p><h2>Let's compare <em>notes.</em></h2></div><a class="button button-primary" href="contact.html">Contact ALTAIR <span>↗</span></a></section>
+  </main>
+  <footer class="site-footer">
+    <a class="footer-brand" href="index.html"><img src="assets/altair-logo.png" data-light-src="assets/altair-logo.png" data-dark-src="assets/altair-logo-transparent.png" alt=""><span>INDEPENDENT AEROSPACE VENTURE</span></a>
+    <nav class="footer-nav" aria-label="Footer navigation"><a href="aeronautics-projects.html">Aeronautics</a><a href="astronautics-projects.html">Astronautics</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+    <p>© <span id="year"></span> ALTAIR Aerospace Group. Independent, early-stage and engineering-led.</p>
+    <p class="disclaimer">Project entries may describe proposed or exploratory work. They are not claims of certification, commercial availability or operational capability. NASA imagery is reference material; NASA does not endorse ALTAIR.</p>
+  </footer>
+</body>
+</html>

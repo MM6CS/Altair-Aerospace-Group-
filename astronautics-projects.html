@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e16">
+  <meta name="description" content="Altair Astronautics project register, including mission objectives, orbital analysis, status and released technical files.">
+  <title>Astronautics projects | ALTAIR Aerospace Group</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script><script src="projects-data.js" defer></script><script src="projects.js" defer></script>
+</head>
+<body data-project-division="Astronautics">
+  <div class="topline"><span class="signal"></span> ALTAIR ASTRONAUTICS <span class="topline-separator">/</span> PROJECT FILE</div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="ALTAIR Aerospace Group home"><img class="brand-emblem" src="assets/altair-emblem.png" data-light-src="assets/altair-emblem.png" data-dark-src="assets/altair-emblem-transparent.png" alt=""><span class="brand-wording"><img src="assets/altair-wordmark.png" data-light-src="assets/altair-wordmark.png" data-dark-src="assets/altair-wordmark-transparent.png" alt=""><img src="assets/aerospace-group-wordmark.png" data-light-src="assets/aerospace-group-wordmark.png" data-dark-src="assets/aerospace-group-wordmark-transparent.png" alt=""></span></a>
+    <div class="header-controls"><button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode"><span aria-hidden="true">◐</span></button><button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button></div>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation"><a href="index.html">Overview</a><a href="aeronautics.html">Aeronautics</a><a class="current" aria-current="page" href="astronautics.html">Astronautics</a><a href="projects.html">All projects</a><a href="research.html">Research</a><a class="nav-contact" href="contact.html">Contact <span>↗</span></a></nav>
+  </header>
+  <main>
+    <section class="page-hero project-division-hero space-register-hero">
+      <div class="page-hero-copy"><p class="eyebrow"><span class="eyebrow-line"></span> ASTRONAUTICS / PROJECT REGISTER</p><h1>Space systems.<br><em>Clear mission files.</em></h1><p>Browse orbital mechanics, spacecraft concepts and space-engineering tools. Each project can carry its own mission brief, analysis, CAD and simulation resources.</p></div>
+      <span class="project-image-credit">NASA / Gemini 7 Earth limb · Reference image only</span>
+      <div class="page-hero-index"><span>DIVISION</span><b>ALTAIR ASTRONAUTICS</b></div>
+    </section>
+    <section class="section-pad portfolio-section division-portfolio-section">
+      <div class="section-heading"><div><p class="section-kicker">01 / SPACE PROGRAMME</p><h2>Project <em>register.</em></h2></div><p>Only files deliberately added to the project repository are published. File links and project status are maintained in the shared project catalogue.</p></div>
+      <div class="portfolio-controls division-controls"><label class="search-control"><span>SEARCH ASTRONAUTICS</span><input id="project-search" type="search" placeholder="Search projects or files…" autocomplete="off"></label><label class="select-control"><span>STAGE</span><select id="project-status"><option value="all">All stages</option><option value="Proposed">Proposed</option><option value="Concept">Concept</option><option value="In progress">In progress</option><option value="Testing">Testing</option><option value="Complete">Complete</option></select></label></div>
+      <p class="result-count" id="project-count" aria-live="polite"></p>
+      <div class="portfolio-grid" id="portfolio-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden><span>NO MATCHING PROJECTS</span><p>Try a different search or stage.</p></div>
+      <div class="portfolio-admin"><div class="admin-icon" aria-hidden="true">+</div><div><p class="section-kicker">PROJECT OWNER / MAINTAIN THE REGISTER</p><h3>Add a project or release a file</h3><p>Use the project builder to draft an entry, put released files in <code>project-files/astronautics/&lt;project-id&gt;/</code>, then commit the entry and files to GitHub.</p></div><a class="button button-outline" href="project-builder.html?division=Astronautics">Open project builder <span>↗</span></a></div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="footer-brand" href="index.html"><img src="assets/altair-logo.png" data-light-src="assets/altair-logo.png" data-dark-src="assets/altair-logo-transparent.png" alt=""><span>INDEPENDENT AEROSPACE VENTURE</span></a><nav class="footer-nav" aria-label="Footer navigation"><a href="astronautics.html">Astronautics</a><a href="aeronautics.html">Aeronautics</a><a href="research.html">Research</a><a href="contact.html">Contact</a></nav><p>© <span id="year"></span> ALTAIR Aerospace Group. Independent, early-stage and engineering-led.</p><p class="disclaimer">Project entries may describe proposed or exploratory work. NASA imagery is reference material; NASA does not endorse ALTAIR.</p></footer>
+</body>
+</html>

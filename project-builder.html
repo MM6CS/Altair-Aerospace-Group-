@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e16">
+  <meta name="description" content="Prepare an ALTAIR Aerospace project catalogue entry and file manifest for the static GitHub Pages website.">
+  <title>Project builder | ALTAIR Aerospace Group</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script><script src="projects-data.js" defer></script><script src="project-builder.js" defer></script>
+</head>
+<body>
+  <div class="topline"><span class="signal"></span> ALTAIR PROJECT OFFICE <span class="topline-separator">/</span> LOCAL MANIFEST BUILDER</div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="ALTAIR Aerospace Group home"><img class="brand-emblem" src="assets/altair-emblem.png" data-light-src="assets/altair-emblem.png" data-dark-src="assets/altair-emblem-transparent.png" alt=""><span class="brand-wording"><img src="assets/altair-wordmark.png" data-light-src="assets/altair-wordmark.png" data-dark-src="assets/altair-wordmark-transparent.png" alt=""><img src="assets/aerospace-group-wordmark.png" data-light-src="assets/aerospace-group-wordmark.png" data-dark-src="assets/aerospace-group-wordmark-transparent.png" alt=""></span></a>
+    <div class="header-controls"><button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode"><span aria-hidden="true">◐</span></button><button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button></div>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation"><a href="index.html">Overview</a><a href="aeronautics.html">Aeronautics</a><a href="astronautics.html">Astronautics</a><a href="projects.html">All projects</a><a href="research.html">Research</a><a class="nav-contact" href="contact.html">Contact <span>↗</span></a></nav>
+  </header>
+  <main>
+    <section class="page-hero builder-hero"><div class="page-hero-copy"><p class="eyebrow"><span class="eyebrow-line"></span> FOUNDER TOOL / PROJECT SETUP</p><h1>Prepare a project<br><em>for the register.</em></h1><p>Create a project entry and file manifest. This local helper does not upload files or modify GitHub; follow the publish checklist below to release the project.</p></div><div class="page-hero-index"><span>MODE</span><b>LOCAL DRAFT / NO SERVER UPLOAD</b></div></section>
+    <section class="section-pad builder-section">
+      <form class="builder-form" id="project-form">
+        <div class="builder-block-heading"><span>01 / PROJECT IDENTITY</span><h2>Project details</h2></div>
+        <div class="builder-fields">
+          <label>What would you like to do?<select id="builder-mode"><option value="new">Add a project</option><option value="edit">Edit an existing project</option></select></label>
+          <label id="existing-project-field" hidden>Choose a project to edit<select id="existing-project"><option value="">Select a project</option></select></label>
+          <label>Project title<input name="title" required maxlength="100" placeholder="e.g. Small satellite thermal study"></label>
+          <label>Division<select name="division" required><option value="Aeronautics">Altair Aeronautics</option><option value="Astronautics">Altair Astronautics</option></select></label>
+          <label>Discipline<select name="category" required><option>Aeronautics</option><option>Astronautics</option><option>Software</option><option>Unmanned systems</option></select></label>
+          <label>Stage<select name="status" required><option>Proposed</option><option>Concept</option><option>In progress</option><option>Testing</option><option>Complete</option></select></label>
+          <label>Project phase<input name="phase" required maxlength="60" placeholder="e.g. Preliminary design"></label>
+          <label>Project code<input name="code" maxlength="24" placeholder="e.g. A / 03"></label>
+          <label class="builder-check-label"><span><input name="featured" type="checkbox"> Feature this project on the homepage</span></label>
+          <label class="builder-wide">Summary<textarea name="summary" required maxlength="400" rows="3" placeholder="What are you investigating? State what the work is and is not."></textarea></label>
+          <label class="builder-wide">Objective<textarea name="objective" required maxlength="300" rows="2" placeholder="What specific question or outcome is this project addressing?"></textarea></label>
+          <label class="builder-wide">Next step<textarea name="nextStep" required maxlength="200" rows="2" placeholder="What is the next concrete milestone?"></textarea></label>
+        </div>
+        <div class="builder-block-heading builder-files-heading"><span>02 / PROJECT FILES</span><h2>Attach your deliverables</h2><p>Select local files to add links to the catalogue. When editing, existing file links are kept. Copy any new files into the suggested repository folder; this website cannot upload them.</p></div>
+        <label class="file-picker">Choose documents, CAD, models, results or other files<input id="resource-files" type="file" multiple><span class="file-types">PDF · DOCX · STEP · STL · OBJ · GLB · CSV · ZIP · images · source files</span></label>
+        <div id="existing-resources" class="existing-resources" aria-live="polite"></div>
+        <div id="selected-files" class="selected-files" aria-live="polite"></div>
+        <div class="builder-actions"><button class="button button-primary" type="submit">Generate project entry <span>↗</span></button><button class="button button-secondary" id="download-entry" type="button" disabled>Download JSON draft <span>↓</span></button></div>
+      </form>
+      <aside class="builder-output" id="builder-output" hidden>
+        <div class="builder-block-heading"><span>03 / REVIEW &amp; PUBLISH</span><h2>Draft catalogue entry</h2></div>
+        <p>Review your project entry, then download the updated catalogue and replace <code>projects-data.js</code> with it. Copy any new files into the matching project folder before publishing.</p>
+        <pre><code id="entry-output"></code></pre>
+        <div class="builder-actions"><button class="button button-primary" type="button" id="download-catalog">Download updated catalogue <span>↓</span></button><button class="button button-secondary" type="button" id="copy-entry">Copy project entry <span>↗</span></button><a class="button button-outline" href="README.md#adding-project-files">Open file guide <span>↗</span></a></div>
+        <p class="builder-status" id="builder-status" role="status"></p>
+        <ol class="publish-steps"><li>Create <code>project-files/&lt;division&gt;/&lt;project-id&gt;/</code>.</li><li>Copy the selected deliverables there; keep related files organised in folders such as <code>documents/</code>, <code>cad/</code>, <code>models/</code> and <code>results/</code>.</li><li>Check you have permission to publish every file; remove secrets and sensitive or controlled technical data.</li><li>Commit the files and project entry to your GitHub repository. The public listing updates when GitHub Pages deploys.</li></ol>
+      </aside>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="footer-brand" href="index.html"><img src="assets/altair-logo.png" data-light-src="assets/altair-logo.png" data-dark-src="assets/altair-logo-transparent.png" alt=""><span>INDEPENDENT AEROSPACE VENTURE</span></a><nav class="footer-nav" aria-label="Footer navigation"><a href="aeronautics-projects.html">Aeronautics projects</a><a href="astronautics-projects.html">Astronautics projects</a><a href="research.html">Research</a><a href="contact.html">Contact</a></nav><p>© <span id="year"></span> ALTAIR Aerospace Group. Independent, early-stage and engineering-led.</p><p class="disclaimer">This tool prepares a local draft only. It does not publish to GitHub Pages or upload selected files.</p></footer>
+</body>
+</html>
