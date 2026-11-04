@@ -2,7 +2,7 @@
 
 A multi-page, responsive static website for an early-stage, faith-informed aerospace venture. Built with HTML, CSS and vanilla JavaScript; deployable on GitHub Pages with no server, build step or paid service.
 
-The visual direction uses a dark graphite-and-navy aerospace palette, bright blue instrument accents, image-led mission storytelling and a public, searchable project portfolio. It takes broad inspiration from [Day Aerospace](https://dayaerospace.com/) and the project-focused structure of the [In-Space Recycling project workspace](https://andreaspoimen.github.io/3rd-Year-Project/) without copying either site's identity. NASA images are factual reference imagery and are credited; NASA is not affiliated with or endorsing ALTAIR.
+
 
 ## Pages and files
 
